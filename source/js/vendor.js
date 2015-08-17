@@ -1,1 +1,2 @@
-//= require material
+//= require jquery
+//= require materialize-sprockets

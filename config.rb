@@ -1,7 +1,10 @@
+Time.zone = data.site.time_zone
+
 set :css_dir,               'css'
 set :js_dir,                'js'
 set :images_dir,            'img'
 set :fonts_dir,             'fonts'
+set :snippets_dir,          'snippets'
 
 # Slim template engine
 require 'slim'
@@ -32,11 +35,24 @@ page '/*.txt', layout: false
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def nav_link(name, url, options={})
+    options = {
+      class: "",
+      active_if: url,
+      page: current_page.url,
+    }.update options
+    active_url = options.delete(:active_if)
+    active = Regexp === active_url ? current_page.url =~ active_url : current_page.url == active_url
+    options[:class] += " active" if active
+
+    link_to name, url, options
+  end
+  
+  def snippet file
+    partial "#{config.snippets_dir}/#{file}"
+  end
+end
 
 configure :development do
   # Reload the browser automatically whenever files change
@@ -59,3 +75,10 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 end
+
+# activate :deploy do |deploy|
+#   deploy.method = :rsync
+#   deploy.host   = ENV['DEPLOY_HOST']
+#   deploy.path   = ENV['DEPLOY_PATH']
+#   deploy.clean  = true
+# end

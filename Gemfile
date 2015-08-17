@@ -17,4 +17,5 @@ gem 'middleman-livereload'
 
 gem 'slim'
 
-gem 'material_design_lite-rails', require: false
+gem 'middleman-jquery'
+gem 'materialize-sass'
