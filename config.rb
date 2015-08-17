@@ -16,6 +16,9 @@ require 'sass'
 # Page options, layouts, aliases and proxies
 ###
 
+activate :directory_indexes
+set :trailing_slash, true
+
 # Per-page layout changes:
 #
 # With no layout
@@ -36,6 +39,11 @@ page '/*.txt', layout: false
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def resource_active?(resource)    
+    # active = Regexp === resource. ? current_page.url =~ active_url : current_page.url == active_url
+    current_page.url.include?(resource.url)
+  end
+  
   def nav_link(name, url, options={})
     options = {
       class: "",
@@ -51,6 +59,10 @@ helpers do
   
   def snippet file
     partial "#{config.snippets_dir}/#{file}"
+  end
+  
+  def nav_title page
+    page.data[:navigation_title] || page.data.title || page.url
   end
 end
 

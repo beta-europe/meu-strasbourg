@@ -45,8 +45,19 @@ html lang="en"
     == stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Nobile:700italic'
 
   body
-    == yield
-
+    header
+      - if current_page.data.title
+        nav.top-nav
+          .container
+            .nav-wrapper
+              a.page-title= current_page.data.title
+      .container
+        a.button-collapse.top-nav.full.hide-on-large-only data-activates="nav-mobile" href="#" 
+          i.mdi-navigation-menu
+      == snippet "navigation"
+      
+    main
+      == yield
     == snippet "footer"
     
     == javascript_include_tag "vendor"

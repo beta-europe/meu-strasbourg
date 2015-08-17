@@ -1,0 +1,23 @@
+ul#nav-mobile.side-nav.fixed
+  li.logo
+    a#logo-container.brand-logo href="/" 
+      object#front-page-logo data="/img/materialize.svg" type="image/svg+xml"  Your browser does not support SVG
+
+  - for resource in sitemap.find_resource_by_path('/index.html').children.sort_by{|child| child.data[:navigation_order] || Float::INFINITY }
+    - if resource.ext == '.html' && !resource.data[:navigation_hide]
+      - if resource.children.count == 0
+        li.bold class=('active' if resource_active?(resource))
+          a.waves-effect.waves-teal href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
+      - else
+        li.no-padding
+          ul.collapsible.collapsible-accordion
+            li.bold
+              a.collapsible-header.waves-effect.waves-teal class=('active' if resource_active?(resource))
+                = resource.data[:navigation_title]
+              .collapsible-body
+                ul
+                  li class=('active' if resource.url == current_page.url)
+                    a href="/#{resource.destination_path}" Overview
+                  - for resource in resource.children.sort_by{|child| child.data[:navigation_order] || Float::INFINITY }
+                    li class=('active' if resource_active?(resource))
+                      a href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
