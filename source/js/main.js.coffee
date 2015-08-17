@@ -19,3 +19,11 @@ $(document).ready ->
       
   if is_touch_device()
     $('#nav-mobile').css( overflow: 'auto')
+    
+  # Floating-Fixed table of contents
+  if $('nav').length
+    $('.toc-wrapper').pushpin(top: $('nav').height())
+  else if $('#index-banner').length
+    $('.toc-wrapper').pushpin(top: $('#index-banner').height())
+  else
+    $('.toc-wrapper').pushpin(top: 0)
