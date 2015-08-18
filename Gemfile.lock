@@ -1,6 +1,25 @@
 GIT
+  remote: https://github.com/follmann/middleman-favicon-maker.git
+  revision: 63a1fe6d2f3f621b8156b355fe432e3198071a5d
+  branch: master
+  specs:
+    middleman-favicon-maker (4.0.0.beta.1)
+      favicon_maker (~> 1.3)
+      middleman-core (~> 4.0.beta)
+
+GIT
+  remote: https://github.com/middleman/middleman-blog.git
+  revision: 78190cf890deee309485041abbbe0a6f7ccba8bc
+  branch: master
+  specs:
+    middleman-blog (3.6.0.beta.2)
+      addressable (~> 2.3.5)
+      middleman-core (>= 3.3)
+      tzinfo (>= 0.3.0)
+
+GIT
   remote: https://github.com/middleman/middleman.git
-  revision: bb6b8c7f133d2468e5605e7c9624e3221ce32da4
+  revision: 0861fad2e1a464494d73336a327b8b71acc6a7e7
   branch: master
   specs:
     middleman (4.0.0.beta.3)
@@ -28,7 +47,7 @@ GIT
       hamster (~> 1.0)
       hashie (~> 3.4)
       i18n (~> 0.7.0)
-      listen (>= 2.7.9, < 3.0)
+      listen (~> 3.0)
       padrino-helpers (~> 0.12.3)
       rack (>= 1.4.5, < 2.0)
       sass (>= 3.3.4)
@@ -48,8 +67,6 @@ GEM
     atomic (1.1.99)
     backports (3.6.6)
     builder (3.2.2)
-    celluloid (0.16.1)
-      timers (~> 4.0.0)
     chunky_png (1.3.4)
     coffee-script (2.4.1)
       coffee-script-source
@@ -68,6 +85,7 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     contracts (0.9)
+    docile (1.1.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -76,6 +94,8 @@ GEM
     execjs (2.6.0)
     fastimage (1.6.8)
       addressable (~> 2.3, >= 2.3.5)
+    favicon_maker (1.3)
+      docile (~> 1.1)
     ffi (1.9.10)
     haml (4.0.7)
       tilt
@@ -83,13 +103,11 @@ GEM
       atomic (~> 1.1)
     hashie (3.4.2)
     hike (1.2.3)
-    hitimes (1.2.2)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.8.0)
-    listen (2.10.1)
-      celluloid (~> 0.16.0)
+    listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     materialize-sass (0.97.0)
@@ -148,8 +166,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    timers (4.0.2)
-      hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -163,7 +179,9 @@ DEPENDENCIES
   builder (~> 3.2.2)
   materialize-sass
   middleman!
+  middleman-blog!
   middleman-deploy (~> 2.0.0.pre.alpha)
+  middleman-favicon-maker!
   middleman-jquery
   middleman-livereload
   slim

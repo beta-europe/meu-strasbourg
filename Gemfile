@@ -14,6 +14,10 @@ gem 'middleman', :git => 'https://github.com/middleman/middleman.git', :branch =
 gem 'middleman-deploy', '~> 2.0.0-alpha'
 
 gem 'middleman-livereload'
+gem 'middleman-blog', :git => 'https://github.com/middleman/middleman-blog.git', :branch => 'master'
+
+# gem 'middleman-favicon-maker', '~> 4.0.0.beta.1'
+gem 'middleman-favicon-maker', :git => 'https://github.com/follmann/middleman-favicon-maker.git', :branch => 'master'
 
 gem 'slim'
 

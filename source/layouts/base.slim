@@ -14,14 +14,22 @@ html lang=(data.site.lang)
         = data.site.title
     /! Add to homescreen for Chrome on Android
     meta content="yes" name="mobile-web-app-capable"
-    link href="images/touch/chrome-touch-icon-192x192.png" rel="icon" sizes="192x192"
+    
+    = favicon_tag '/apple-touch-icon-57x57-precomposed.png', rel: "apple-touch-icon-precomposed", type: "image/png", sizes: "57x57"
+    = favicon_tag '/apple-touch-icon-72x72-precomposed.png', rel: "apple-touch-icon-precomposed", type: "image/png", sizes: "72x72"
+    = favicon_tag '/apple-touch-icon-114x114-precomposed.png', rel: "apple-touch-icon-precomposed", type: "image/png", sizes: "114x114"
+    = favicon_tag '/apple-touch-icon-precomposed.png', rel: "apple-touch-icon-precomposed", type: "image/png"
+    = favicon_tag 'apple-touch-icon.png', rel: "apple-touch-icon", type: "image/png"
+    = favicon_tag 'favicon.ico', rel: "icon", type: "image/ico", sizes: "16x16" 
+    = favicon_tag 'favicon.png', rel: "shortcut icon", type: "image/png"
+    = favicon_tag 'chrome-touch-icon-192x192.png', rel: "icon", sizes: "192x192"
+    
     /! Add to homescreen for Safari on iOS
     meta content="yes" name="apple-mobile-web-app-capable"
     meta content="black" name="apple-mobile-web-app-status-bar-style"
     meta content=("Material Design Lite") name="apple-mobile-web-app-title"
-    link href="apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"
     /! Tile icon for Win8 (144x144 + tile color)
-    meta content="images/touch/ms-touch-icon-144x144-precomposed.png" name="msapplication-TileImage"
+    meta content="#{config[:http_prefix]}/#{config[:images_dir]}/ms-touch-icon-144x144-precomposed.png" name="msapplication-TileImage"
     meta content="#3372DF" name="msapplication-TileColor"
     /! Android 5 Chrome Color
     meta content="#EE6E73" name="theme-color"
@@ -29,7 +37,6 @@ html lang=(data.site.lang)
     /!
       | <link rel="canonical" href="http://www.example.com/"
     / == stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
-    / == stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Inconsolata'
     == stylesheet_link_tag 'main', media: :all
     == stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
     == stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Nobile:700italic'

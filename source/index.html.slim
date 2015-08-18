@@ -1,6 +1,7 @@
 ---
 navigation_title: Home
 navigation_order: 0
+layout: base
 ---
 
 .intro-heading.valign-wrapper
@@ -10,9 +11,10 @@ navigation_order: 0
         .box> Model
         .eu> European Union
         .year= data.site.simulation[:year]
-      h2.city= data.site.simulation[:city]
-    a.row.btn-floating.btn-large.waves-effect.waves-light.waves-blue style="clear: both; display:block;" href="#welcome"
-      i.material-icons play_arrow
+      h2.city.center-on-large-only= data.site.simulation[:city]
+    a.row.btn-floating.btn-large style="clear: both; display:block; background-color: rgba(100,100,100,0.8)" href="#welcome"
+      svg viewBox="0 0 24 24"
+        path fill="#FFFFFF" d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z"
       
 .container
   .section
@@ -24,7 +26,7 @@ navigation_order: 0
     .col.s12.m6
       .card.medium
         .card-image
-          img src="/img/cards-meeting.jpg"
+          = image_tag "cards-meeting.jpg"
           span.card-title About Model EU
         .card-content
           p The most challenging simulation of EU politics reaches its ninth edition.
@@ -33,7 +35,7 @@ navigation_order: 0
     .col.s12.m6
       .card.medium
         .card-image
-          img src="/img/cards-placards.jpg"
+          = image_tag "cards-placards.jpg"
           span.card-title Application
         .card-content
           p Get a feeling of how the EU decision-making process works? MEU 2015 will be held in Strasbourg between 11th - 18th April 2015
@@ -42,7 +44,7 @@ navigation_order: 0
     .col.s12.m6
       .card.medium
         .card-image
-          img src="/img/cards-parliament.jpg"
+          = image_tag "cards-parliament.jpg"
           span.card-title Partners
         .card-content
           p Without the generous help of our partners & supporters, MEU wouldn't be possible.
@@ -51,7 +53,7 @@ navigation_order: 0
     .col.s12.m6
       .card.medium
         .card-image
-          img src="/img/cards-city.jpg"
+          = image_tag "cards-city.jpg"
           span.card-title Strasbourg
         .card-content
           p Situated in the North-East of France, Strasbourg is the official seat of the European Parliament.

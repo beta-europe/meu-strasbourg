@@ -27,7 +27,7 @@ $primary-color: color("indigo", "base") !default;
   }
 }
 .intro-heading {
-  background: transparent url("/img/header-meu2015.jpg") no-repeat scroll center center / cover;
+  background: transparent url(image-path("header-meu2015.jpg")) no-repeat scroll center center / cover;
   height: 100vh;
   color: white; 
   @media #{$large-and-up} {
@@ -71,4 +71,14 @@ $primary-color: color("indigo", "base") !default;
 
 .waves-effect.waves-blue .waves-ripple {
   @extend .indigo;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }

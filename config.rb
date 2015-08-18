@@ -18,8 +18,7 @@ require 'sass'
 
 activate :directory_indexes
 set :trailing_slash, true
-activate :relative_assets
-set :relative_links, true
+set :layout, :page
 
 ignore /.*\.kate-swp/
 ignore /.*\.new/
@@ -44,7 +43,7 @@ page '/*.txt', layout: false
 ###
 
 # Methods defined in the helpers block are available in templates
-helpers do
+helpers do  
   def resource_active?(resource)    
     # active = Regexp === resource. ? current_page.url =~ active_url : current_page.url == active_url
     current_page.url.include?(resource.url)
@@ -72,9 +71,40 @@ helpers do
   end
 end
 
+
+###
+# Collections
+###
+activate :blog do |news|
+  news.prefix = "news"
+  # blog.permalink = ":year/:month/:day/:title.html"
+  # blog.sources = ":year-:month-:day-:title.html"
+  # blog.taglink = "tags/:tag.html"
+  news.layout = "news"
+  news.summary_separator = /<!--\s?more\s?-->/
+  news.summary_length = BigDecimal::INFINITY
+  # blog.summary_length = 250
+  # blog.year_link = ":year.html"
+  # blog.month_link = ":year/:month.html"
+  # blog.day_link = ":year/:month/:day.html"
+  news.default_extension = ".md"
+  news.sources = ":year-:month-:day-:title.html"
+
+  # news.tag_template = "tag.html"
+  # news.calendar_template = "calendar.html"
+
+  news.paginate = true
+  # blog.per_page = 10
+  # blog.page_link = "page/:num"
+end
+
 configure :development do
   # Reload the browser automatically whenever files change
   activate :livereload
+  
+  # support run from local directory (favicons not supported)
+  activate :relative_assets
+  set :relative_links, true
   
   # Slim configuration
   set :slim, {
@@ -92,6 +122,30 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+  
+  # Make favicons
+  # use: https://github.com/follmann/middleman-favicon-maker
+  activate :favicon_maker do |maker|
+    maker.output_dir = "#{config[:build_dir]}/#{config[:images_dir]}"
+    maker.icons = {
+      "_favicon-base.png" => [
+        { icon: "ms-touch-icon-144x144-precomposed.png", size: "144x144"},
+        { icon: "apple-touch-icon-114x114-precomposed.png", size: "114x114" },
+        { icon: "apple-touch-icon-72x72-precomposed.png", size: "72x72" },
+        { icon: "apple-touch-icon-57x57-precomposed.png", size: "57x57" },
+        { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
+        { icon: "apple-touch-icon.png", size: "57x57" },
+        { icon: "favicon.png", size: "16x16" },
+        { icon: "favicon.ico", size: "16x16" },
+      ]
+    }
+  end
+  
+  
+  # Enable cache buster
+  activate :asset_hash
+
+  set :http_prefix, '/meu-strasbourg' # if the homepage is not in the root folder but in a subdirectory
 end
 
 # activate :deploy do |deploy|

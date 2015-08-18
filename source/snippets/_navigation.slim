@@ -2,7 +2,7 @@ ul#nav-mobile.side-nav.fixed
   li.logo
     = link_to '/index.html', id: 'logo-container', class: 'brand-logo'
       / object#front-page-logo data="/img/materialize.svg" type="image/svg+xml"  Your browser does not support SVG
-      img src="/img/beta-logo-transparent.png"
+      = image_tag "beta-logo-transparent.png"
 
   - resource = sitemap.find_resource_by_path('/index.html')
   li.bold class=('active' if resource.url == current_page.url)
