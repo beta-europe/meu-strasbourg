@@ -1,17 +1,19 @@
 ul#nav-mobile.side-nav.fixed
   li.logo
-    a#logo-container.brand-logo href="/"
+    = link_to '/index.html', id: 'logo-container', class: 'brand-logo'
       / object#front-page-logo data="/img/materialize.svg" type="image/svg+xml"  Your browser does not support SVG
       img src="/img/beta-logo-transparent.png"
 
   - resource = sitemap.find_resource_by_path('/index.html')
   li.bold class=('active' if resource.url == current_page.url)
-    a.waves-effect.waves-blue href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
+    = link_to resource, class: 'waves-effect waves-blue'
+      = resource.data[:navigation_title] || resource.data[:title]
   - for resource in resource.children.sort_by{|child| child.data[:navigation_order] || Float::INFINITY }
     - if resource.ext == '.html' && !resource.data[:navigation_hide]
       - if resource.children.count == 0
         li.bold class=('active' if resource_active?(resource))
-          a.waves-effect.waves-blue href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
+          = link_to resource, class: 'waves-effect waves-blue'
+            = resource.data[:navigation_title] || resource.data[:title]
       - else
         li.no-padding
           ul.collapsible.collapsible-accordion
@@ -21,7 +23,8 @@ ul#nav-mobile.side-nav.fixed
               .collapsible-body
                 ul
                   li class=('active' if resource.url == current_page.url)
-                    a href="/#{resource.destination_path}" Overview
+                    = link_to 'Overview', resource
                   - for resource in resource.children.sort_by{|child| child.data[:navigation_order] || Float::INFINITY }
                     li class=('active' if resource_active?(resource))
-                      a href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
+                      = link_to resource
+                        = resource.data[:navigation_title] || resource.data[:title]

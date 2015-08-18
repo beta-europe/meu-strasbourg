@@ -18,6 +18,12 @@ require 'sass'
 
 activate :directory_indexes
 set :trailing_slash, true
+activate :relative_assets
+set :relative_links, true
+
+ignore /.*\.kate-swp/
+ignore /.*\.new/
+ignore /.*\.backup/
 
 # Per-page layout changes:
 #
@@ -97,5 +103,5 @@ end
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
-  deploy.remote   = 'github'
+  deploy.remote   = 'git@github.com:beta-europe/meu-strasbourg.git'
 end

@@ -1,5 +1,5 @@
 doctype html
-html lang="en" 
+html lang=(data.site.lang)
   head
     meta charset="utf-8"
     meta content="IE=edge" http-equiv="X-UA-Compatible"
@@ -7,7 +7,11 @@ html lang="en"
     meta content="#{((current_page.data[:keywords] || []) + (data.site[:keywords] || [])).join(',')}" name="keywords"
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="no" name="msapplication-tap-highlight"
-    title MODEL European Union 2016 Strasbourg
+    title
+      - if current_page.data[:navigation_title]
+        = current_page.data[:navigation_title] + " - " + data.site.title
+      - else
+        = data.site.title
     /! Add to homescreen for Chrome on Android
     meta content="yes" name="mobile-web-app-capable"
     link href="images/touch/chrome-touch-icon-192x192.png" rel="icon" sizes="192x192"

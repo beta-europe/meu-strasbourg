@@ -1,7 +1,8 @@
 lang: en
-title: Robert Riemann
-subtitle: notepad
-description: A front-end template that helps you build fast, modern mobile web apps.
+title: MODEL European Union Strasbourg 2016
+description: |
+  MODEL European Union (MEU) Strasbourg is a large scale EU simulation taking
+  place annually in the European Parliament in Strasbourg.
 keywords:
   - Bringing European’s Together Association e.V.
   - BETA e.V
@@ -9,7 +10,7 @@ keywords:
 copyright: BETA e.V.
 time_zone: Europe/Paris
 contact:
-  mail:  mail@meu-strasbourg.org
+  mail: mail@meu-strasbourg.org
   twitter: ModelEU
   facebook_page: meustrasbourg
   youtube_user: MEUStrasbourg
@@ -19,4 +20,6 @@ simulation:
   year: 2016
   city: Strasbourg
 
+domain: beta-europe.github.io
+document_root: /meu-strasbourg
 google_analytics_id: UA-12737249-1

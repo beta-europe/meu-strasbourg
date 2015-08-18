@@ -19,3 +19,6 @@ gem 'slim'
 
 gem 'middleman-jquery'
 gem 'materialize-sass'
+
+
+gem 'builder', '~> 3.2.2'
