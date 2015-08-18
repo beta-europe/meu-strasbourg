@@ -9,8 +9,8 @@ layout: base
     .row.title
       h1.thin
         .box> Model
-        .eu> European Union
-        .year= data.site.simulation[:year]
+        span.eu> European Union
+        span.year= data.site.simulation[:year]
       h2.city.center-on-large-only= data.site.simulation[:city]
     a.row.btn-floating.btn-large style="clear: both; display:block; background-color: rgba(100,100,100,0.8)" href="#welcome"
       svg viewBox="0 0 24 24"
@@ -36,11 +36,11 @@ layout: base
       .card.medium
         .card-image
           = image_tag "cards-placards.jpg"
-          span.card-title Application
+          span.card-title Participating
         .card-content
           p Get a feeling of how the EU decision-making process works? MEU 2015 will be held in Strasbourg between 11th - 18th April 2015
         .card-action
-          = link_to 'Read More', '/application/index.html'
+          = link_to 'Read More', '/participating/index.html'
     .col.s12.m6
       .card.medium
         .card-image

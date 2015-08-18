@@ -8,6 +8,9 @@ $(document).ready ->
   $('.parallax').parallax()
   $('.modal-trigger').leanModal()
   $('.scrollspy').scrollSpy()
+  $('.materialboxed').materialbox();
+  $('.collapsible').collapsible(accordion : true);
+        
   
   # Detect touch screen and enable scrollbar if necessary
   is_touch_device = ->
