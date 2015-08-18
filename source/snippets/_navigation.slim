@@ -1,18 +1,22 @@
 ul#nav-mobile.side-nav.fixed
   li.logo
-    a#logo-container.brand-logo href="/" 
-      object#front-page-logo data="/img/materialize.svg" type="image/svg+xml"  Your browser does not support SVG
+    a#logo-container.brand-logo href="/"
+      / object#front-page-logo data="/img/materialize.svg" type="image/svg+xml"  Your browser does not support SVG
+      img src="/img/beta-logo-transparent.png"
 
-  - for resource in sitemap.find_resource_by_path('/index.html').children.sort_by{|child| child.data[:navigation_order] || Float::INFINITY }
+  - resource = sitemap.find_resource_by_path('/index.html')
+  li.bold class=('active' if resource.url == current_page.url)
+    a.waves-effect.waves-blue href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
+  - for resource in resource.children.sort_by{|child| child.data[:navigation_order] || Float::INFINITY }
     - if resource.ext == '.html' && !resource.data[:navigation_hide]
       - if resource.children.count == 0
         li.bold class=('active' if resource_active?(resource))
-          a.waves-effect.waves-teal href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
+          a.waves-effect.waves-blue href="/#{resource.destination_path}"= resource.data[:navigation_title] || resource.data[:title]
       - else
         li.no-padding
           ul.collapsible.collapsible-accordion
             li.bold
-              a.collapsible-header.waves-effect.waves-teal class=('active' if resource_active?(resource))
+              a.collapsible-header.waves-effect.waves-blue class=('active' if resource_active?(resource))
                 = resource.data[:navigation_title]
               .collapsible-body
                 ul

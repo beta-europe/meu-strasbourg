@@ -1,24 +1,10 @@
 doctype html
-/!
-  | Material Design Lite
-  | Copyright 2015 Google Inc. All rights reserved.
-  
-  | Licensed under the Apache License, Version 2.0 (the "License");
-  | you may not use this file except in compliance with the License.
-  | You may obtain a copy of the License at
-  
-  | https://www.apache.org/licenses/LICENSE-2.0
-  
-  | Unless required by applicable law or agreed to in writing, software
-  | distributed under the License is distributed on an "AS IS" BASIS,
-  | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  | See the License for the specific language governing permissions and
-  | limitations under the License
 html lang="en" 
   head
     meta charset="utf-8"
     meta content="IE=edge" http-equiv="X-UA-Compatible"
-    meta content="A front-end template that helps you build fast, modern mobile web apps." name="description"
+    meta content="#{current_page.data[:description] || data.site[:description]}" name="description"
+    meta content="#{((current_page.data[:keywords] || []) + (data.site[:keywords] || [])).join(',')}" name="keywords"
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="no" name="msapplication-tap-highlight"
     title MODEL European Union 2016 Strasbourg
@@ -46,17 +32,26 @@ html lang="en"
 
   body
     header
-      - if current_page.data.title
+      - if current_page.data[:title] && !current_page.data[:subtitle]
         nav.top-nav
           .container
             .nav-wrapper
               a.page-title= current_page.data.title
       .container
-        a.button-collapse.top-nav.full.hide-on-large-only data-activates="nav-mobile" href="#" 
-          i.mdi-navigation-menu
+        a.button-collapse.top-nav.hide-on-large-only data-activates="nav-mobile" href="#" class=((current_page.data[:title] && !current_page.data[:subtitle]) ? 'full' : 'waves-effect waves-light circle')
+          i.mdi-navigation-menu          
+          
       == snippet "navigation"
       
     main
+      - if current_page.data[:title] && current_page.data[:subtitle]
+        #index-banner.section
+          .container
+            .row
+              .col.m12
+                h1.header.center-on-small-only= current_page.data[:title]
+                h4.light.center-on-small-only= current_page.data[:subtitle]
+      
       == yield
     == snippet "footer"
     

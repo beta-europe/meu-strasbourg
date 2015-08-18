@@ -1,0 +1,41 @@
+---
+title: Test
+navigation_title: Design Templates (intern)
+navigation_order: 100
+---
+
+.container 
+  #reveal.section.scrollspy
+    .row
+      /! Pullup Card
+      .col.s12.m7
+        h2.header Card Reveal
+        .card
+          .card-image.waves-effect.waves-block.waves-light
+            img.activator src="/img/cards-city.jpg" /
+          .card-content
+            span.card-title.activator.grey-text.text-darken-4
+              | Card Title
+              i.material-icons.right more_vert
+            p
+              a href="#!"  This is a link
+          .card-reveal
+            span.card-title.grey-text.text-darken-4
+              | Card Title
+              i.material-icons.right close
+            p Here is some more information about this product that is only revealed once clicked on.
+      .col.s12.m5
+        br/
+        br/
+        br/
+        br/
+        p.caption
+          | Here you can add a card that reveals more information once clicked. Just add the
+          code.language-markup card-reveal
+          | div with a
+          code.language-markup span.card-title
+          | inside to make this work. Add the class
+          code.language-markup activator
+          | to an element inside the card to allow it to open the card reveal.
+      .col.s12
+        br/
