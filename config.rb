@@ -94,3 +94,8 @@ end
 #   deploy.path   = ENV['DEPLOY_PATH']
 #   deploy.clean  = true
 # end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.remote   = 'github'
+end
