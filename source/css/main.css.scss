@@ -81,12 +81,13 @@ body {
   flex-direction: column;
   main {
     flex: 1 0 auto;
+    font-size: 16px;
   }
 }
 
 
 
-.section ul {
+.section ul:not(.pagination) {
   li {
     list-style-type: disc;
     padding-left: 0.5em;

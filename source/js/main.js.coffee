@@ -9,7 +9,7 @@ $(document).ready ->
   $('.modal-trigger').leanModal()
   $('.scrollspy').scrollSpy()
   $('.materialboxed').materialbox();
-  $('.collapsible').collapsible(accordion : true);
+  # $('.collapsible').collapsible(accordion : true);
         
   
   # Detect touch screen and enable scrollbar if necessary
