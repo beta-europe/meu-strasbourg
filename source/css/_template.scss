@@ -25,12 +25,12 @@ nav {
     -webkit-font-smoothing: antialiased;
   }
   ul li:hover, ul li.active {
-    @extend .indigo;
+    background-color: color("materialize-red", "lighten-1");
   }
 }
 
 .header {
-  color: color("indigo", "lighten-1");
+  color: color("materialize-red", "lighten-2");
   font-weight: 300;
 }
 
@@ -193,7 +193,7 @@ a.button-collapse.top-nav {
 }
 
 #index-banner {
-  @extend .indigo, .lighten-2;
+  background-color: color("materialize-red", "lighten-2");
   .container {
     position: relative;
   }
@@ -202,7 +202,6 @@ a.button-collapse.top-nav {
   }
   h4 {
     margin-bottom: 40px;
-    color: color("indigo", "lighten-3") !important;
   }
   h1 {
     margin-top: 16px;
@@ -806,4 +805,17 @@ body.parallax-demo footer {
   }
 
 
+}
+
+
+// Thanks for Downloading
+
+#download-thanks {
+  display: none;
+}
+
+
+// Twitter widget
+#twitter-widget-0 {
+  width: 190px !important;
 }

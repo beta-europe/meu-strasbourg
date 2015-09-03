@@ -1,13 +1,50 @@
 @charset "utf-8";
 
+/*
+@import 'material/animation';
+@import 'material/badge';
+@import 'material/button';
+@import 'material/card';
+@import 'material/checkbox';
+@import 'material/color-definitions';
+@import 'material/data-table';
+@import 'material/functions';
+@import 'material/grid';
+@import 'material/icon-toggle';
+@import 'material/layout';
+// @import "material/material-icons";
+@import 'material/mega_footer';
+@import 'material/mini_footer';
+@import 'material/menu';
+@import 'material/palette';
+@import 'material/progress';
+@import 'material/radio';
+@import 'material/resets';
+@import 'material/ripple';
+// @import 'material/roboto';
+@import 'material/shadow';
+// @import 'material/slider';
+@import 'material/spinner';
+@import 'material/switch';
+@import 'material/tabs';
+@import 'material/textfield';
+@import 'material/tooltip';
+// @import 'material/typography';
+*/
 
 @import "materialize/components/color";
+// https://github.com/mkhairi/materialize-sass/blob/master/app/assets/stylesheets/materialize/components/_variables.scss
 $ci-1: #003399;         // eu blue
 $ci-2: #FBD100;         // eu yellow
-$primary-color: color("indigo", "base") !default;
+$primary-color: color("indigo", "base");
+$footer-bg-color: color("indigo", "base");
 @import "materialize";
 
+
 @import "template";
+
+
+@import "compass/css3/images";
 
 li.logo {
   height: 90px;
@@ -21,10 +58,29 @@ li.logo {
 ul.side-nav.fixed li.logo {
   text-align: inherit;
 }
-.card .card-image .card-title {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 
+.header {
+  @extend .indigo-text, .text-lighten-1;
+}
+#index-banner {
+  @extend .indigo, .lighten-2;
+  h1.header {
+    color: #fff !important;
+  }
+  h4 {
+    color: color("indigo", "lighten-4");
+  }
+}
+footer.page-footer {
+  .footer-copyright {
+    @extend .indigo, .darken-4;
+  }
+}
+.nav ul li {
+  &:active, &:hover {
+    @extend .indigo;
+  }
+}
 
 @media #{$large-and-up} {
   .center-on-large-only {
@@ -90,8 +146,13 @@ body {
   }
 }
 
+.card-title.text-shadow {
+  @include background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.67)));
+  width: 100%;
+}
 
 
+// bullet list
 .section ul:not(.pagination) {
   li {
     list-style-type: disc;
@@ -99,4 +160,25 @@ body {
   }
   list-style: disc outside;
   padding-left: 2em;
+}
+
+
+
+// mdl shadow card
+@import "compass/css3/images";
+.mdl-button {
+  font-size: 16px;
+}
+.demo-card-wide {
+  max-width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  // background: url(image-path("cards-meeting.jpg")) center / cover;
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(image-path("cards-meeting.jpg")) no-repeat;
+  @include background(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(image-path("cards-meeting.jpg")) center / cover);
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }

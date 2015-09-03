@@ -5,16 +5,17 @@ layout: base
 ---
 
 .intro-heading.valign-wrapper
-  .valign
+  .valign.container
     .row.title
-      h1.thin
+      h1.thin.center-on-large-only
         .box> Model
         span.eu> European Union
         span.year= data.site.simulation[:year]
       h2.city.center-on-large-only= data.site.simulation[:city]
-    a.row.btn-floating.btn-large style="clear: both; display:block; background-color: rgba(100,100,100,0.8)" href="#welcome"
-      svg viewBox="0 0 24 24"
-        path fill="#FFFFFF" d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z"
+    .row.center-align
+      a.btn-floating.btn-large style="background-color: rgba(100,100,100,0.8)" href="#welcome"
+        svg viewBox="0 0 24 24"
+          path fill="#FFFFFF" d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z"
       
 .container
   .section
@@ -27,7 +28,7 @@ layout: base
       .card.medium
         .card-image
           = image_tag "cards-meeting.jpg"
-          span.card-title About Model EU
+          span.card-title.text-shadow About Model EU
         .card-content
           p The most challenging simulation of EU politics reaches its ninth edition.
         .card-action
@@ -36,14 +37,14 @@ layout: base
       .card.medium
         .card-image
           = image_tag "cards-placards.jpg"
-          span.card-title Participating
+          span.card-title.text-shadow Participating
         .card-content
           p Get a feeling of how the EU decision-making process works? MEU will be held in Strasbourg in April 2015
         .card-action
           = link_to 'Read More', '/participating/index.html'
     .col.s12.m6
       .card.medium
-        .card-image
+        .card-image.text-shadow
           = image_tag "cards-parliament.jpg"
           span.card-title Partners
         .card-content
@@ -52,7 +53,7 @@ layout: base
           = link_to 'Read More', '/partners/index.html'
     .col.s12.m6
       .card.medium
-        .card-image
+        .card-image.text-shadow
           = image_tag "cards-city.jpg"
           span.card-title Strasbourg
         .card-content
