@@ -1,4 +1,4 @@
-ruby '2.1.5'
+ruby '2.2.1'
 
 # If you do not have OpenSSL installed, update
 # the following line to use "http://" instead

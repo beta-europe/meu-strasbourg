@@ -9,13 +9,18 @@ $primary-color: color("indigo", "base") !default;
 
 @import "template";
 
-#logo-container.brand-logo {
-  height: 44px;
-  img {
-    width: 100%;
+li.logo {
+  height: 90px;
+  #logo-container {
+    height: 90px;
+    img {
+      height: 110px;
+    }
   }
 }
-
+ul.side-nav.fixed li.logo {
+  text-align: inherit;
+}
 .card .card-image .card-title {
   background-color: rgba(0, 0, 0, 0.4);
 }
