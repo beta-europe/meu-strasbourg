@@ -75,6 +75,9 @@ footer.page-footer {
   .footer-copyright {
     @extend .indigo, .darken-4;
   }
+  p {
+    @extend .white-text;
+  }
 }
 .nav ul li {
   &:active, &:hover {
