@@ -19,44 +19,53 @@ layout: base
       
 .container
   .section
-    h2.header.scrollspy#welcome Welcome
-    p.caption= lorem.sentences 6
+    markdown:
+      ## Under Construction
+      {:.header.scrollspy.red-text#welcome}
+      
+      We are glad you found your way to the official *Model European Union Strasbourg* website.
+      Unfortunately, you catched us in the middle of a complete website overhaul. Just in a few
+      weeks, you will find condensed, relevant information on our annual conference and
+      how to apply.
+      {:.caption}
+      
+      Why don't you follow us on our social media channels in order to stay up-to-date?
     
-  
-  .row
-    .col.s12.m6
-      .card.medium
-        .card-image
-          = image_tag "cards-meeting.jpg"
-          span.card-title.text-shadow About Model EU
-        .card-content
-          p The most challenging simulation of EU politics reaches its ninth edition.
-        .card-action
-          = link_to 'Read More', '/model-eu/index.html'
-    .col.s12.m6
-      .card.medium
-        .card-image
-          = image_tag "cards-placards.jpg"
-          span.card-title.text-shadow Participating
-        .card-content
-          p Get a feeling of how the EU decision-making process works? MEU will be held in Strasbourg in April 2015
-        .card-action
-          = link_to 'Read More', '/participating/index.html'
-    .col.s12.m6
-      .card.medium
-        .card-image.text-shadow
-          = image_tag "cards-parliament.jpg"
-          span.card-title Partners
-        .card-content
-          p Without the generous help of our partners & supporters, MEU wouldn't be possible.
-        .card-action
-          = link_to 'Read More', '/partners/index.html'
-    .col.s12.m6
-      .card.medium
-        .card-image.text-shadow
-          = image_tag "cards-city.jpg"
-          span.card-title Strasbourg
-        .card-content
-          p Situated in the North-East of France, Strasbourg is the official seat of the European Parliament.
-        .card-action
-          = link_to 'Read More', '/city/index.html'
+  /
+    .row
+      .col.s12.m6
+        .card.medium
+          .card-image
+            = image_tag "cards-meeting.jpg"
+            span.card-title.text-shadow About Model EU
+          .card-content
+            p The most challenging simulation of EU politics reaches its ninth edition.
+          .card-action
+            = link_to 'Read More', '/model-eu/index.html'
+      .col.s12.m6
+        .card.medium
+          .card-image
+            = image_tag "cards-placards.jpg"
+            span.card-title.text-shadow Participating
+          .card-content
+            p Get a feeling of how the EU decision-making process works? MEU will be held in Strasbourg in April 2015
+          .card-action
+            = link_to 'Read More', '/participating/index.html'
+      .col.s12.m6
+        .card.medium
+          .card-image.text-shadow
+            = image_tag "cards-parliament.jpg"
+            span.card-title Partners
+          .card-content
+            p Without the generous help of our partners & supporters, MEU wouldn't be possible.
+          .card-action
+            = link_to 'Read More', '/partners/index.html'
+      .col.s12.m6
+        .card.medium
+          .card-image.text-shadow
+            = image_tag "cards-city.jpg"
+            span.card-title Strasbourg
+          .card-content
+            p Situated in the North-East of France, Strasbourg is the official seat of the European Parliament.
+          .card-action
+            = link_to 'Read More', '/city/index.html'

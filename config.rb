@@ -24,6 +24,7 @@ ignore /.*\.kate-swp/
 ignore /.*\.new/
 ignore /.*\.backup/
 
+
 # Per-page layout changes:
 #
 # With no layout
@@ -117,6 +118,16 @@ end
 
 # Build-specific configuration
 configure :build do
+  
+  # temporary block most pages
+  ignore /test/
+  ignore /model-eu/
+  ignore /news/
+  ignore /city/
+  ignore /partners/
+  ignore /participating/
+  
+  
   # Minify CSS on build
   activate :minify_css
 
@@ -145,7 +156,7 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
-  set :http_prefix, '/meu-strasbourg' # if the homepage is not in the root folder but in a subdirectory
+  # set :http_prefix, '/meu-strasbourg' # if the homepage is not in the root folder but in a subdirectory
 end
 
 # activate :deploy do |deploy|
