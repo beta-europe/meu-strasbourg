@@ -8,20 +8,27 @@ layout: frontpage
 header:
   image_fullwidth: header-meu2015.jpg
 widget1:
-  title: "Widget 1"
+  title: Model European Union
   url: 'http://domain.de/must-be-absolut-url-like-this-one/'
-  image: 'http://dummyimage.com/302x183/334d5c/efc94c.png&text=Placeholder'
-  text: ''
+  image: /images/cards-placards.jpg
+  text: |
+    Participate in one of the most realistic EU politics simulations in the role
+    of a member of the parliament, an interpreter, the press, etc.
 widget2:
-  title: "Widget 2"
+  title: City of Strasbourg
   url: 'http://domain.de/must-be-absolut-url-like-this-one/'
-  image: 'http://dummyimage.com/302x183/334d5c/efc94c.png&text=Placeholder'
-  text: ''
+  image: /images/cards-city.jpg
+  text: |
+    The conference will take place in Strasbourg. Find out more about the truly
+    European city you are going to explore during your stay.
 widget3:
-  title: "Widget 3"
+  title: "Partners"
   url: 'http://domain.de/must-be-absolut-url-like-this-one/'
-  image: 'http://dummyimage.com/302x183/334d5c/efc94c.png&text=Placeholder'
-  text: ''
+  image: /images/cards-parliament.jpg
+  text: |
+    Our conference would not be possible without the support of our numerous
+    partners, supporters and sponsors. Get to known them and learn how to join
+    our project.
 #
 # Use the call for action to show a button on the frontpage
 #
