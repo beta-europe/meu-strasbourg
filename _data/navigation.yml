@@ -17,11 +17,11 @@
     url: "#"
 
 - title: Blog
-  url: "/blog/"
+  url: "/news/"
   side: left
   dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
+  - title: "News Archive"
+    url: "/news/archive/"
 
 #
 #   Navigation to the right › side: right
