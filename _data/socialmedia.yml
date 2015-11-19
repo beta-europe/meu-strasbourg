@@ -1,27 +1,27 @@
 - name: GitHub
-  url: http://github.com/
+  url: http://github.com/beta-europe/meu-strasbourg
   class: icon-github
-  title: ""
+  title: "Source Code"
 
 - name: YouTube
-  url: http://www.youtube.com/
+  url: https://www.youtube.com/user/MEUStrasbourg
   class: icon-youtube
-  title: ""
+  title: "MEUStrasbourg"
 
 - name: Twitter
-  url: http://twitter.com/
+  url: https://twitter.com/modeleu
   class: icon-twitter
-  title: ""
+  title: "MEU Strasbourg"
 
 # - name: Mixcloud
 #   url: http://www.mixcloud.com/
 #   class: icon-cloud
 #   title: ""
 
-# - name: Facebook
-#   url: http://www.facebook.com/
-#   class: icon-facebook
-#   title: ""
+- name: Facebook
+  url: https://www.facebook.com/meustrasbourg
+  class: icon-facebook
+  title: "Model European Union Strasbourg"
 
 # - name: Soundcloud
 #   url: http://soundcloud.com/
