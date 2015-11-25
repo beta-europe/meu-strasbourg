@@ -1,6 +1,6 @@
 ---
 layout: blog
-section_id: blog
+section_id: announcements
 ---
 
 {% for post in paginator.posts %}
@@ -30,7 +30,7 @@ section_id: blog
         </span>
         /
         <span>
-          <a href="#">4 commetns</a>
+          <a href="#">4 comments</a>
         </span>
       </p>
       <h3><a href="{{post.url}}">{{post.title}}</a></h3>
@@ -44,7 +44,7 @@ section_id: blog
 {% endfor %}
 
 
-{% include pagination.html root="blog" %}
+{% include pagination.html root="announcements" %}
 
 
 <div class='four spacing'></div>
