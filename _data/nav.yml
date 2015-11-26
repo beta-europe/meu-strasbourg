@@ -3,6 +3,7 @@
   section_id: home
 - name: Apply
   path: apply/
+  section_id: apply
 - name: Team
   path: team/
   section_id: team
