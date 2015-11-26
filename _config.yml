@@ -1,14 +1,18 @@
 # Site settings
-title: Elbe
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
+title: Model EU Strasbourg
+email: contact@model-strasbourg.org
+description: >
+  Model European Union Strasbourg (MEUS) is a unique simulation of EU
+  decision-making and politics, taking place annually in Strasbourg.
+keywords: >
+  Model European Union, Political Simulation, MEU, MEUS, EU Politics,
+  European Politics, European Parliament, Strasbourg, Original MEU
+# the subpath of your site, e.g. /blog/
+baseurl: "http://www.meu-strasbourg.org"
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: modeleu
+github_username:  beta-europe
+facebook_page: meustrasbourg
 
 # Build settings
 markdown: kramdown
@@ -16,4 +20,4 @@ markdown: kramdown
 
 gems: [jekyll-paginate]
 paginate: 4
-paginate_path: "blog/page:num"
+paginate_path: "announcements/page:num"
