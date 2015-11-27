@@ -2,49 +2,35 @@
 layout: default
 section_id: home
 slides:
-  - bg: images/@stock/slide-2.jpg
-    title:
-      text: Wrap is a creative theme for many purposes
-      animation: bottom-to-top
-      class: large-8 medium-11
-    buttons:
-      animation: bottom-to-top
-      class: medium-12
-      items:
-        - text: Purchase Now
-          url: http://themeforest.net/user/honryou/portfolio?ref=honryou
-          class: boxed
   - bg: images/@stock/slide-3.jpg
     title:
-      text: It is simple but powerful
+      text: Apply for the authoritative simulation of the European Politics!
       animation: bottom-to-top
-      class: large-7 large-offset-5 medium-9 medium-offset-3
+      class: large-5 large-offset-7 medium-6 medium-offset-6
+  - bg: images/@stock/slide-2.jpg
+    title:
+      text: Find out which role is best for you!
+      animation: bottom-to-top
+      class: large-7 medium-9
     buttons:
       animation: bottom-to-top
-      class: large-7 large-offset-5 medium-9 medium-offset-3
+      class: large-7 medium-9
       items:
-        - text: Purchase Now
-          url: http://themeforest.net/user/honryou/portfolio?ref=honryou
+        - text: Read about Roles
+          url: "#roles"
           class: boxed
   - bg: images/@stock/slide-1.jpg
+    title:
+      text: Find out more about our supporters!
+      animation: bottom-to-top
+      class: large-8 medium-11
     buttons:
       animation: bottom-to-top slow
       class: large-12
       items:
-        - text: View Features
-          url: http://themeforest.net/user/honryou/portfolio?ref=honryou
+        - text: Our Partners
+          url: /partners/
           class: boxed
-        - text: Purchase Now
-          url: http://themeforest.net/user/honryou/portfolio?ref=honryou
-    infos:
-      - text: "&nbsp;Creative and responsive design"
-        animation: bottom-to-top
-      - text: "&nbsp;Many helpful shortcodes"
-        animation: bottom-to-top
-      - text: "&nbsp;Simple but powerful theme options"
-        animation: bottom-to-top
-      - text: "&nbsp;Fully responsive"
-        animation: bottom-to-top
 roles:
   - image: role-mep.svg
     title: Member of the European Parliament
@@ -233,7 +219,7 @@ clients:
               <div class='{{slide.buttons.class}} columns'>
                 <div class='two spacing'></div>
                 {% for button in slide.buttons.items %}
-                  <a target="_blank" class='button {{button.class}}' href='{{button.url}}'>{{button.text}}</a>
+                  <a class='button scrollbutton {{button.class}}' href='{{button.url}}'>{{button.text}}</a>
                 {% endfor %}
               </div>
             </div>
@@ -270,7 +256,7 @@ clients:
       -->
     </div>
   </div>
-  <div class='four spacing'></div>
+  <div class='four spacing' id="roles"></div>
   <div class='row'>
     <div class='medium-6 columns'>
       <div class='two spacing'></div>
