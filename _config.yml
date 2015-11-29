@@ -16,6 +16,8 @@ facebook_page: meustrasbourg
 
 next_conference: "in April 2016"
 
+google_analytics_tracking_id: UA-70824910-1
+
 # Build settings
 markdown: kramdown
 
