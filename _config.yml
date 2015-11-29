@@ -18,6 +18,8 @@ next_conference: "in April 2016"
 
 google_analytics_tracking_id: UA-70824910-1
 
+permalink: /announcements/:year/:month/:day/:title/
+
 # Build settings
 markdown: kramdown
 
