@@ -1,0 +1,11 @@
+---
+layout: post
+title:  New Website
+date:   2015-11-29 10:20:05
+categories: meta
+author: Robert
+images:
+---
+
+For the 10th edition of the Model European Union, the website was completely
+overhouled. The works are not finished yet. So please stay tuned!
