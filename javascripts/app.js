@@ -791,9 +791,9 @@ jQuery(document).foundation();
 
       $('.items', $ctx).slick({
         autoplay: true,
-        pauseOnHover: false,
+        pauseOnHover: true,
         dots: show_dots,
-        speed: 1500,
+        speed: 2500,
         arrows: false
       });
 

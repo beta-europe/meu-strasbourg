@@ -7,6 +7,13 @@ slides:
       text: Apply for the authoritative simulation of the European Politics!
       animation: bottom-to-top
       class: large-6 large-offset-6
+    buttons:
+      animation: bottom-to-top slow
+      class: large-offset-8
+      items:
+        - text: Apply
+          url: /apply/
+          class: boxed
   - bg: images/@stock/slide-2.jpg
     title:
       text: Find out which role is best for you!
@@ -94,10 +101,10 @@ roles:
 milestones:
   - from: 0
     to: 5551
-    title: total received applications
+    title: applications received
   - from: 0
     to: 1422
-    title: total participants
+    title: participants welcomed
   - from: 0
     to: 400
     title: and more supporting MEPs, Commissioners, Ministers
@@ -168,7 +175,7 @@ clients:
 ---
 
 <div class='advanced mod modDefaultSlider'>
-  <div class='sequence' data-autostop='on' data-timeout='0'>
+  <div class='sequence' data-autostop='on' data-timeout='6000'>
     <a class='sequence-prev' href='javascript:void(0);'>
       <span></span>
     </a>
@@ -297,72 +304,7 @@ clients:
 </div>
 
 
-<div class='full'>
-  {% for role in page.roles %}
-  <div class='row'>
-    <div class='large-12 columns'>
-      <h4 style='color: #999'>Role Description</h4>
-      <h2>{{ role.title }}</h2>
-      <div class='spacing'></div>
-      <div style="float:left; margin-right:15px;">
-        <img src='images/{{role.image}}' width="100" heigh="100" />
-      </div>
-      <p>{{ role.text }}</p>
-    </div>
-  </div>
-  <div class='three spacing'></div>
-  {% endfor %}
-</div>
 
-<!--
-<div class='full' style='background: #f5f5f5'>
-  <div class='row'>
-    <div class='large-12 columns'>
-      <div class='mod modBoxedTextSlider'>
-        <div class='boxes'>
-          {% for role in page.roles__EXCLUDE %}
-            <div class='box' style=''>
-              <i class='{{role.icon_class}}'></i>
-              <h4>{{role.title}}</h4>
-              <p>{{role.text}}</p>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class='four spacing'></div>
-</div>
-//-->
-
-<div class='full parallax' style='background: #f5f5f5'>
-  <div class='row'>
-    {% for milestone in page.milestones %}
-      <div class='medium-3 large-3 columns right-border left-border'>
-        <div class='mod modMilestone no-icon'>
-          <strong data-from='{{milestone.from}}' data-to='{{milestone.to}}'>&nbsp;</strong>
-          <span>{{milestone.title}}</span>
-          <div class='spacing'></div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  <div class='four spacing'></div>
-</div>
-<div class='full no-padding' style='background: #444; color: #fff'>
-  <div class='two spacing'></div>
-  <div class='mod modCallToAction'>
-    <div class='row'>
-      <div class='medium-9 large-9 columns'>
-        <p>Like what you see here? Checkout the application procedure and apply for the next conference {{site.next_conference}}.</p>
-      </div>
-      <div class='medium-3 large-3 columns'>
-        <a class='boxed button' href="{{site.url}}/apply/">Apply</a>
-      </div>
-    </div>
-  </div>
-  <div class='spacing'></div>
-</div>
 <div class='full'>
   <div class='row'>
     <div class='large-12 columns'>
@@ -430,6 +372,76 @@ clients:
     </div>
   </div>
   <div class='two spacing'></div>
+</div>
+
+
+<div class='full'>
+  {% for role in page.roles %}
+  <div class='row'>
+    <div class='large-12 columns'>
+      <h2>{{ role.title }}</h2>
+      <div class='spacing'></div>
+      <div style="float:left; margin-right:15px;">
+        <img src='images/{{role.image}}' width="100" heigh="100" />
+      </div>
+      <p>{{ role.text }}</p>
+    </div>
+  </div>
+  <div class='three spacing'></div>
+  {% endfor %}
+</div>
+
+<!--
+<div class='full' style='background: #f5f5f5'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='mod modBoxedTextSlider'>
+        <div class='boxes'>
+          {% for role in page.roles__EXCLUDE %}
+            <div class='box' style=''>
+              <i class='{{role.icon_class}}'></i>
+              <h4>{{role.title}}</h4>
+              <p>{{role.text}}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
+//-->
+
+<div class='full parallax' style='background: #f5f5f5'>
+  <div class='row'>
+    <p class="text-center">Since 2007, MEU Strasbourg has</p>
+    {% for milestone in page.milestones %}
+      <div class='medium-3 large-3 columns right-border left-border'>
+        <div class='mod modMilestone no-icon'>
+          <strong data-from='{{milestone.from}}' data-to='{{milestone.to}}'>&nbsp;</strong>
+          <span>{{milestone.title}}</span>
+          <div class='spacing'></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class='four spacing'></div>
+</div>
+
+
+<div class='full no-padding' style='background: #444; color: #fff'>
+  <div class='two spacing'></div>
+  <div class='mod modCallToAction'>
+    <div class='row'>
+      <div class='medium-9 large-9 columns'>
+        <p>Like what you see here? Checkout the application procedure and apply for the next conference {{site.next_conference}}.</p>
+      </div>
+      <div class='medium-3 large-3 columns'>
+        <a class='boxed button' href="{{site.url}}/apply/">Apply</a>
+      </div>
+    </div>
+  </div>
+  <div class='spacing'></div>
 </div>
 
 <!--
