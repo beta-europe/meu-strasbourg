@@ -1,6 +1,9 @@
 - name: Home
   path: ''
   section_id: home
+- name: About MEUS
+  path: about/
+  section_id: about
 - name: Apply
   path: apply/
   section_id: apply
@@ -13,6 +16,6 @@
 - name: Contact
   path: contact/
   section_id: contact
-- name: Announcements
+- name: News
   path: announcements/
   section_id: announcements
