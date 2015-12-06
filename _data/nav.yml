@@ -1,6 +1,8 @@
 - name: Home
   path: ''
   section_id: home
+- name: About MEU
+  path: ''
 - name: Apply
   path: apply/
   section_id: apply
