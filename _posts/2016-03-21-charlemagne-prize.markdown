@@ -1,13 +1,12 @@
 ---
 layout: post
 title:  "MEU Strasbourg the nominee for the European Charlemagne Youth Prize!"
-date:   2016-03-21 00:20:05
+date:   2016-03-21
 categories: awards
 author: "Michał"
 images:
   - images/charlemagne-prize-2016.jpg
 ---
-
 **We are proud to announce that we have been nominated as one of
 the 28 contenders for the European Charlemagne Youth Prize!**
 
