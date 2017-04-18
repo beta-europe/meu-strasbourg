@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "New Website"
-date:   2015-11-29 10:20:05
+title:  "Danuta Hübner"
+date:   2017-04-18 12:46:05
 categories: letters of support
 author: "Danuta Hübner"
 images:
