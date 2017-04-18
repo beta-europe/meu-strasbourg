@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Pavel Poc letter of support"
+date:   2017-04-18 13:30:05
+categories: letters of support
+author: "Pavel poc"
+images:
+  - images/17-04-2017-MEP-Pavel-Poc.markdown-1.png 
+---
