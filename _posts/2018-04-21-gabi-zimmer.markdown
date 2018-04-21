@@ -1,5 +1,5 @@
 ---
-title:  "MEP Gabri Zimmer's Letter of Support"
+title:  "MEP Gabi Zimmer's Letter of Support"
 date:   2018-04-21
 author: "Maria"
 images:
